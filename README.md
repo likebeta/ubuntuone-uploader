@@ -98,7 +98,7 @@ chmod +x ubuntuone_uploader.py
 
 ##share
 
-分享文件夹，目前没有分享目录的API：
+分享文件，目前没有分享目录的API：
 
 ```sh
 ./ubuntuone_uploader.py share -l                #查看所有的分享文件
