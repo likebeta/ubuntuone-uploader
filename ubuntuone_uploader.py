@@ -151,7 +151,7 @@ class UbuntuOne:
 
 		for item in files['children']:
 			if item['kind'] == 'directory':
-				print('%10s    %s'%('---',item['path'] + '/'))
+				print('%10s    %s'%('---',item['path']))
 			elif item['kind'] == 'file':
 				print('%10s    %s'%(to_human_see(item['size']),item['path']))
 
