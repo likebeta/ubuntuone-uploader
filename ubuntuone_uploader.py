@@ -74,7 +74,7 @@ class UbuntuOne:
 		res = conn.getresponse()
 		return res.read()
 
-	def __delete(self, url):
+	def __del(self, url):
 		sreq, host = self.__sign_url(url)
 		conn = httplib.HTTPSConnection(host)
 		hd = dict(sreq.to_header().items())
@@ -214,7 +214,7 @@ class UbuntuOne:
 		if not self.__check_auth():
 			return
 		
-		resp = self.__delete('https://one.ubuntu.com/api/file_storage/v1/~/Ubuntu%20One' + self.args.remote)
+		resp = self.__del('https://one.ubuntu.com/api/file_storage/v1/~/Ubuntu%20One' + self.args.remote)
 		try:
 			result = json.loads(resp)
 			if result.has_key('error'):
